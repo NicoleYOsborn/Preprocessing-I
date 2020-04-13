@@ -85,7 +85,6 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -104,12 +103,33 @@ nav,
 section {
   display: block;
 }
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Baloo Paaji 2 Medium'), local('BalooPaaji2-Medium'), url(https://fonts.gstatic.com/s/baloopaaji2/v1/i7dRIFFzbz-QHZUdV9_UGWZuWKa5OwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Baloo Paaji 2 SemiBold'), local('BalooPaaji2-SemiBold'), url(https://fonts.gstatic.com/s/baloopaaji2/v1/i7dRIFFzbz-QHZUdV9_UGWZuWIq-OwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
 body {
   line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+  list-style-position: inside;
 }
 blockquote,
 q {
@@ -129,8 +149,102 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  border: 1px solid black;
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  color: #FFAE00;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 5rem;
+  margin: 2% 0;
+  font-style: bold;
+}
+h2 {
+  color: #323232;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 2rem;
+}
+h3 {
+  color: #FFAE00;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 3.5rem;
+}
+h4 {
+  color: #323232;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-top: 2%;
+}
+h5 {
+  color: #323232;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+}
+p,
+li {
+  color: #323232;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+  background: #b2b2b2;
+  padding: 2%;
+}
+header .profilePhoto {
+  border-radius: 50%;
+  width: 12%;
+}
+header .headerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 65%;
+}
+header .headerInfo nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: #323232;
+  font-size: 2rem;
+}
+.mainSection {
+  display: flex;
+  align-items: center;
+  background-color: #e4e4e4;
+  height: 70%;
+}
+.mainSection .aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  min-height: 100%;
+  background-color: #e4e4e4;
+  padding: 2%;
+}
+.mainSection .experienceSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
+  background-color: #ededed;
+  width: 70%;
+}
+footer {
+  background: #FFAE00;
+  display: flex;
+  justify-content: center;
 }
