@@ -149,7 +149,6 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  border: 1px solid black;
 }
 html,
 body {
@@ -181,7 +180,6 @@ h4 {
   color: #323232;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
-  margin-top: 2%;
 }
 h5 {
   color: #323232;
@@ -210,7 +208,7 @@ header .profilePhoto {
 header .headerInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 65%;
 }
 header .headerInfo nav {
@@ -222,24 +220,26 @@ header .headerInfo nav {
 }
 .mainSection {
   display: flex;
-  align-items: center;
   background-color: #e4e4e4;
   height: 70%;
+}
+.mainSection .column {
+  height: 100%;
+}
+.mainSection .contentSection {
+  margin: 2em;
 }
 .mainSection .aboutSection {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  min-height: 100%;
   background-color: #e4e4e4;
-  padding: 2%;
 }
 .mainSection .experienceSection {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2%;
   background-color: #ededed;
   width: 70%;
 }

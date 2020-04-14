@@ -141,7 +141,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	border: 1px solid black;
+	// border: 1px solid black;
 }
 
 html,
@@ -161,22 +161,22 @@ a {
 @accent-color: #FFAE00;
 @main-text-color: #323232;
 @headerFont: 'Baloo Paaji 2', cursive;
-@mainFont:  'Roboto', sans-serif;
+@mainFont: 'Roboto', sans-serif;
 
 // Mixins
 
-.spaceBetween(){
+.spaceBetween() {
 	display: flex;
 	justify-content: space-between;
 }
 
-.columnSpaceBetween(){
+.columnSpaceBetween() {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-
+// Header styles
 h1 {
 	color: @accent-color;
 	font-family: @headerFont;
@@ -195,91 +195,92 @@ h3 {
 	color: @accent-color;
 	font-family: @headerFont;
 	font-size: 3.5rem;
-	// margin-top: 10%;
 }
 
 h4 {
 	color: @main-text-color;
 	font-family: @mainFont;
 	font-size: 2rem;
-	margin-top: 2%;
 }
 
-h5 {
-	color: @main-text-color;
-	font-family: @mainFont;
-	font-style: italic;
-	font-size: 2rem;
-}
-
-p,
-li {
-	color: @main-text-color;
-	font-family: @mainFont;
-	font-size: 2rem;
-}
-
-
-header {
-	.spaceBetween();
-	width: 100%;
-	height: 30%;
-	background: #b2b2b2;
-	padding: 2%;
-
-	.profilePhoto {
-		border-radius: 50%;
-		width: 12%;
+	h5 {
+		color: @main-text-color;
+		font-family: @mainFont;
+		font-style: italic;
+		font-size: 2rem;
 	}
 
-	.headerInfo {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		width: 65%;
+	p,
+	li {
+		color: @main-text-color;
+		font-family: @mainFont;
+		font-size: 2rem;
+	}
 
-		nav {
-			.spaceBetween();
-			width: 50%;
-			color: @main-text-color;
-			font-size: 2rem;
+
+	header {
+		.spaceBetween();
+		width: 100%;
+		height: 30%;
+		background: #b2b2b2;
+		padding: 2%;
+
+		.profilePhoto {
+			border-radius: 50%;
+			width: 12%;
 		}
 
-		//this ends nav in header info
+		.headerInfo {
+			.columnSpaceBetween();
+			width: 65%;
+
+			nav {
+				.spaceBetween();
+				width: 50%;
+				color: @main-text-color;
+				font-size: 2rem;
+			}
+
+			//this ends nav in header info
+		}
+
+		//this ends header info
 	}
 
-	//this ends header info
-}
+	//this ends header
 
-//this ends header
-
-.mainSection {
-	display: flex;
-	align-items: center;
-	background-color: #e4e4e4;
-	height: 70%;
-	
-
-	.aboutSection {
-		.columnSpaceBetween();
-		width: 40%;
-		min-height: 100%;
+	.mainSection {
+		display: flex;
 		background-color: #e4e4e4;
-		padding: 2%;
+		height: 70%;
+
+		.column {
+			height: 100%;
+		}
+
+		.contentSection {
+			margin: 2em;
+
+		}
+
+		.aboutSection {
+			.columnSpaceBetween();
+			width: 40%;
+			background-color: #e4e4e4;
+
+		}
+
+		.experienceSection {
+			.columnSpaceBetween();
+			background-color: #ededed;
+			width: 70%;
+		}
 	}
 
-	.experienceSection {
-		.columnSpaceBetween();
-		padding: 2%;
-		background-color: #ededed;
-		width: 70%;
+	//this ends main section
+
+	footer {
+		background: @accent-color;
+		display: flex;
+		justify-content: center;
 	}
-}
-
-//this ends main section
-
-footer{
-	background: @accent-color;
-	display: flex;
-	justify-content: center;
-}
